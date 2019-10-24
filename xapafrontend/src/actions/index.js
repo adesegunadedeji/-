@@ -1,7 +1,7 @@
-export const increment =(number) => {
+//Actions 
+export const increment =() => {
     return {
-        type: "INCREMENT",
-        payload: number
+        type: "INCREMENT"
     }
 }
 export const decrement =() => {
