@@ -1,20 +1,12 @@
 import React from 'react';
 import './App.css';
-import {useSelector, useDispatch} from 'react-redux'
-import {increment, decrement} from './actions'
+import Counter  from './components/Counter'
+
 
 function App() {
-  const counter = useSelector(state => state.counter);
-  const authentication = useSelector(state => state.authentication);
-  const dispatch = useDispatch();
   return (
-
     <div className="App">
-      <h1>Counter {counter}</h1>
-      <button onClick={()=> 
-        dispatch(increment())}>+</button>
-      <button onClick={()=> dispatch(decrement())}>-</button>
-      {authentication ?  <h1>Authentication | I should not see it </h1>: ''}
+      <Counter/>
     </div>
   );
 }

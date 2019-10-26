@@ -5,11 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux';
 import rootReducer from './reducers/index';
+import counterReducer from './reducers/counter' 
 import {Provider} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // //Store  =>> Globalized State
-const store = createStore(rootReducer,/* preloadedState, */
+const store = createStore(counterReducer,/* preloadedState, */
  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 
