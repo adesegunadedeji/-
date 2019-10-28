@@ -1,32 +1,22 @@
 
-
-// const counterReducer =(state = 0, action) => { 
-//     switch(action.type){
-//         case "INCREMENT":
-//             return state + 1;
-//         case  'DECREMENT':
-//                 return state - 1;
-//         default:
-//             return state
-//     }
-// }
-
 const initialState = {
-    count: 0
-  };
-  
-  function counterReducer(state = initialState, action) {
+  count: 0
+};
+
+function counterReducer(state = initialState, action) {
+  console.log(state)
     switch(action.type) {
       case 'INCREMENT':
         return {
-          count: state.count + 1
+          count: initialState.count++
         };
+        
       case 'DECREMENT':
         return {
-          count: state.count - 1
+          count: initialState.count--
         };
       default:
         return state;
     }
   }
-  export default counterReducer;
+  export default counterReducer

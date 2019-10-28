@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {createStore} from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
-import counterReducer from './reducers/counter' 
 import {Provider} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 // //Store  =>> Globalized State
-const store = createStore(counterReducer,/* preloadedState, */
- window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(rootReducer,/* preloadedState, */ applyMiddleware(thunk))
 
 
 ReactDOM.render(
