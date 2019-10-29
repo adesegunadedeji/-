@@ -2,6 +2,7 @@ import React ,{Component} from 'react'
 import {connect} from 'react-redux'
 import * as actionCreators from '../actions/index'
 
+
 import Box from '../components/box'
 class BoxCon extends Component{
 
