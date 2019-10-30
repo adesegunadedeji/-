@@ -1,13 +1,33 @@
- function directoryReducer(state = [], action){
-    console.log("Directory Reducer", state)
-    switch(action.type === "GET_BUSINESS"){
-        case "FETCH_BUSINESS":
-            console.log("Fetched Business")
+
+
+function directoryReducer(state = [], action){
+    switch(action.type){
+        case "FETCH":
             return{
-                state: action.payload
+                ...state,
+                directoryArray:action.payload
         }
 
+        case "ADD_BUSINESS":
+                console.log("Added Business")
+            return {
+                state: "Added Business"
+        }
+
+        case "DELETE_BUSINESS":
+            console.log('Delete Business')
+        
+            return {
+                state: "Delete Business"
+        }
+                 
+        case "UPDATE_BUSINESS":
+            console.log('Update Business Business')
+            return {
+                state: "Update"
+        }
         default: 
+        console.log("This is default State", state)
         return state
     }
 }

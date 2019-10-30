@@ -5,10 +5,10 @@ import Counter  from './components/Counter'
 import Directory from './components/Directory/BusinessList';
 // import SimpleMap from './components/SimpleMap';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import Footer from './components/Footer/Footer'
 
 function App() {
-
-
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -20,6 +20,7 @@ function App() {
       {/* <SimpleMap/> */}
       </Switch>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }

@@ -6,11 +6,11 @@ import directoryReducer from './directory'
 
 //All Reducers
 const rootReducer = combineReducers({
-    directory: directoryReducer,
     colorReducer: colorReducer,
     counter: counterReducer,
     authentication: authenticationReducer,
- 
+    directory: directoryReducer
+
 });
 
 export default rootReducer

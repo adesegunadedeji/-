@@ -1,8 +1,6 @@
 import React ,{Component} from 'react'
 import {connect} from 'react-redux'
 import * as actionCreators from '../actions/index'
-
-
 import Box from '../components/box'
 class BoxCon extends Component{
 
@@ -19,5 +17,6 @@ class BoxCon extends Component{
 const mapStateToProps =(state)=>{
     // console.log(state)
     return state
+
 }
 export default connect (mapStateToProps, actionCreators)(BoxCon)

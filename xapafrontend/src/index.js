@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 import {Provider} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // //Store  =>> Globalized State
 const store = createStore(rootReducer,/* preloadedState, */ applyMiddleware(thunk))
 

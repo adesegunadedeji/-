@@ -3,7 +3,7 @@ let initialState={
 }
 
 const colorReducer =(state=initialState, action) =>{
-    console.log("Change Color",state)
+    // console.log("Change Color",state)
     if (action.type ==="CHANGE_COLOR") {
         return {
             ...state,
