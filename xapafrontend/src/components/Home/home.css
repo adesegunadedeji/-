@@ -1,0 +1,94 @@
+.container-top {
+    display: grid;
+    grid-template-areas: 
+        "cake   nav"
+        "cake   logo"
+        "cake   description"
+        "cake   popsicles"
+        ".      popsicles";
+    grid-template-rows: 10% 20% 10% 5%;
+    grid-template-columns: 55% 45%;
+}
+
+.container-top #cake-photo {
+    grid-area: cake;
+    width: 100%;
+    z-index: -1;
+    margin-right: 20px;
+}
+.container-top #logo {
+    grid-area: logo;
+    justify-self: center;
+    width: 40%;
+}
+.container-top h6 {
+    grid-area: description;
+    margin-top: -8px;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-self: center;
+    font-size: 1.85vw;
+    line-height: 1.5;
+    color: #A1AFAE;
+    font-family: 'Mansalva', cursive;
+
+}
+.container-top #popsicles-img {
+    grid-area: popsicles;
+    width: 100%;
+    justify-self: end;
+    margin-left: 30px;
+    margin-top: -5px; 
+}
+
+.container-bottom {
+    display: grid;
+    grid-template-areas:
+        "tutorials inspiration recipes"
+        "cupcakes cupcakes cupcakes";
+    grid-template-rows: 200px;
+    grid-gap: 7%;
+    color: #7E8988;
+    margin-top: 5%;
+}
+#tutorials {
+    grid-area: tutorials;
+    margin-left: 20%;
+}
+#inspiration {
+    grid-area: inspiration;
+}
+#recipes {
+    grid-area: recipes;
+    margin-right: 20%;
+}
+#cupcakes {
+    grid-area: cupcakes;
+    width: 100vw;
+    margin-top: -5%;
+}
+p {
+    font-size: 1.75vw;
+}
+.container-bottom h4 {
+    font-size: 3vw;
+    margin-bottom: 6%;
+}
+
+#bottom-logo {
+    grid-area: logo;
+}
+
+h4{
+    font-family: 'Mansalva', cursive;
+}
+.buttonOrg{
+    font-family: Poppins;
+    font-family: 'Mansalva', cursive;
+    padding: 30px;
+    text-align: center;
+    background-color: #000000;
+    box-shadow: 8px 8px 0 rgba(128,83,35,.2);
+    margin: 16px 0px 0px;
+    min-width: 250px;
+}
