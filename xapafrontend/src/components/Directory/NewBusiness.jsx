@@ -55,6 +55,8 @@ class NewBusiness extends Component{
             console.log(err)
         }
     }
+  
+
 
 render(){
     const redirectToReferrer = this.state.redirect;

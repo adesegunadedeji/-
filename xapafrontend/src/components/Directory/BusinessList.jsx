@@ -34,34 +34,33 @@ class Directory extends Component{
             console.log(err)
         }
     }
-
-
     updateBusDirectory = async(id,formData)=>{
+        console.log("PROPS UNDERSRTANDING", this.props)
         try{
             const updateDirectory = await fetch (`http://localhost:3001/directories/${id}`,{
                 method: "PUT",
                 body:JSON.stringify(formData),
                 headers:{
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    'Accept': 'application/json'
                 }
             })
             const parsedResponse = await updateDirectory.json();
             console.log("PARSED RESPONSE!!!!!!!!!", parsedResponse)
                 this.setState({
-                    directory: this.state.directory.map(directory => directory.id === id?
+                    directory: this.props.directory.map(directory => directory.id === id?
                     parsedResponse:  directory)
                 })
-            console.log("Directory Updated", this.state)
         }
         catch(err){
             console.log(err)
         }
-    }
+      }
+
 
     componentDidMount(){
         this.props.getDirectory();
     }
-
     render(){
             console.log("PASSED THROUGH",this.props.directory)
         let directory = !!this.props.directory && this.props.directory.map(directory=>{

@@ -107,11 +107,11 @@ export function deleteBusiness(id)
     }
 }
 
-// export function updateBusiness(id, formData)
-// {
-//     return {
-//         type:'UPDATE_BUSINESS',
-//         payload:id
-//         }
+export function updateBusiness(id, formData)
+{
+    return {
+        type:'UPDATE_BUSINESS',
+        payload:id
+        }
 
-// }
+}

@@ -26,14 +26,16 @@ this.setState({
     [e.target.name]: e.target.value
 })
 }
+
 handleSubmit= async (e)=>{
     e.preventDefault();
-    console.log("Ready to Edit")
-    const validUpdate = await this.props.updateBusDirectory (this.props.directory.id, this.state);
-    if(validUpdate === true){
+    console.log("Ready to Edit", this.props)
+    const validUpdate = await this.props.updateBusDirectory(this.props.directory.id, this.state);
+    if(validUpdate){
         this.toggle(); 
     }
 }
+
   render() {
     return (
       <div>

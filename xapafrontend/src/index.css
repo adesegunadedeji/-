@@ -173,3 +173,7 @@ div.modal-footer{
 div.modal-body{
  font-family: 'Mansalva', cursive; 
 }
+div.card-img-top{
+  width: 500;
+  height: 500;
+}

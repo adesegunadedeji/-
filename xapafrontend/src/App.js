@@ -6,10 +6,9 @@ import NewBusiness from './components/Directory/NewBusiness'
 // import createBusiness from './container/createBusiness'
 import BusinessPage from './components/Directory/BusinessPage' 
 import Directory from './components/Directory/BusinessList';
-// import SimpleMap from './components/SimpleMap';
+
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Example from './components/Navbar2/Navbar'
-import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
 
 
@@ -29,7 +28,6 @@ function App() {
       {/* <Route exact path={"/Maps"} component ={SimpleMap}/> */}
       </Switch>
       </BrowserRouter>
-      <Footer/>
     </div>
   );
 }
