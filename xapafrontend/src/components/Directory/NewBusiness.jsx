@@ -34,7 +34,7 @@ class NewBusiness extends Component{
     createBusDirectory =async(formData) =>{
         try{
             console.log("CREATING NEW PLAYER")
-            const newDirectory = await fetch('http://localhost:3001/directories',{
+            const newDirectory = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/directories`,{
                 method:"POST",
                 credentials: "include",
                 body: JSON.stringify(formData),

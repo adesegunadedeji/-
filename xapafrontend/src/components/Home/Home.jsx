@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Button} from 'reactstrap'
 import './home.css'
 import CarouselHome from './CarouselHome'

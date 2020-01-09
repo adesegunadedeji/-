@@ -23,7 +23,7 @@ class Directory extends Component{
 
     deleteBusDirectory= async(id) => {
         try{
-            await fetch(`http://localhost:3001/directories/${id}`,{
+            await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/${id}`,{
                 method: "DELETE",
             });
             this.setState({
@@ -37,7 +37,7 @@ class Directory extends Component{
     updateBusDirectory = async(id,formData)=>{
         console.log("PROPS UNDERSRTANDING", this.props)
         try{
-            const updateDirectory = await fetch (`http://localhost:3001/directories/${id}`,{
+            const updateDirectory = await fetch (`${process.env.REACT_APP_BACKEND_ADDRESS}/${id}`,{
                 method: "PUT",
                 body:JSON.stringify(formData),
                 headers:{

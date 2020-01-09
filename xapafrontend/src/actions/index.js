@@ -32,7 +32,7 @@ export function changeColor(color){
 
 export function getDirectory(){
  return(dispatch =>{
-        return axios.get("http://localhost:3001/directories").then(response =>{
+        return axios.get(`${process.env.REACT_APP_BACKEND_ADDRESS}/directories`).then(response =>{
             dispatch(getBusiness(response.data))
             // console.log("this is the response for Directory API", response)
         }).catch((err)=>{
