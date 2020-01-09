@@ -47,7 +47,7 @@ class NewBusiness extends Component{
             console.log(parsedResponse)
             if(parsedResponse){
                 this.setState({
-                    directory: [parsedResponse,...this.state.directory]
+                    directory: [...this.state.directory,...parsedResponse,]
                 })
             }
         }
